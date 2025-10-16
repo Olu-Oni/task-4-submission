@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <robot name="my_kuka_robot">
+    <!-- your version of base_link i guess (the floor)-->
     <link name="base_footprint" />
 
     <link name="base_link">
@@ -10,6 +11,13 @@
                     scale="1.0 1.0 1.0" />
             </geometry>
         </visual>
+        <!-- <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://kuka_stick_description/meshes/collision_0.dae"
+                    scale="1.0 1.0 1.0" />
+            </geometry>
+        </collision> -->
     </link>
     <link name="link_1">
         <visual>
@@ -19,6 +27,13 @@
                     scale="1.0 1.0 1.0" />
             </geometry>
         </visual>
+        <!-- <collision>
+            <origin xyz="0.0 0.0 -0.15" rpy="0.0 0.0 0.0" />
+             <geometry>
+                <mesh filename="package://kuka_stick_description/meshes/simplified_link_1.dae"
+                    scale="1.0 1.0 1.0" />
+            </geometry>
+        </collision> -->
     </link>
     <link name="link_2">
         <visual>
@@ -29,7 +44,7 @@
             </geometry>
         </visual>
     </link>
-     <link name="link_3">
+    <link name="link_3">
         <visual>
             <origin xyz="0.0 0.0 -0.60" rpy="0.0 0.0 0.0" />
             <geometry>
@@ -46,6 +61,13 @@
                     scale="1.0 1.0 1.0" />
             </geometry>
         </visual>
+        <!-- <collision>
+            <origin xyz="0.0 0.0 -0.78" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://kuka_stick_description/meshes/simplified_link_4.dae"
+                    scale="1.0 1.0 1.0" />
+            </geometry>
+        </collision> -->
     </link>
     <link name="link_5">
         <visual>
@@ -84,37 +106,40 @@
         <origin xyz="0.0 0.0 0.15" rpy="0.0 0.0 0.0" />
         <parent link="base_link" />
         <child link="link_1" />
-        <axis xyz="0.0 0.0 1"/>
+        <axis xyz="0.0 0.0 1" />
     </joint>
-    <joint name="link1_to_link2" type="continuous">
+    <joint name="link1_to_link2" type="revolute">
         <origin xyz="0.0 0.0 0.21" rpy="0.0 0.0 0.0" />
         <parent link="link_1" />
         <child link="link_2" />
-        <axis xyz="0.0 1 0.0"/>
+        <axis xyz="0.0 1 0.0" />
+        <limit lower="-1.57" upper="1.57" effort="0.0" velocity="0.0" />
     </joint>
     <joint name="link2_to_link3" type="continuous">
         <origin xyz="0.0 0.0 0.24" rpy="0.0 0.0 0.0" />
         <parent link="link_2" />
         <child link="link_3" />
-        <axis xyz="0.0 0.0 1"/>
+        <axis xyz="0.0 0.0 1" />
     </joint>
-    <joint name="link3_to_link4" type="continuous">
+    <joint name="link3_to_link4" type="revolute">
         <origin xyz="0.0 0.0 0.179" rpy="0.0 0.0 0.0" />
         <parent link="link_3" />
         <child link="link_4" />
-        <axis xyz="0.0 1 0.0"/>
+        <axis xyz="0.0 1 0.0" />
+        <limit lower="-1.57" upper="1.57" effort="0.0" velocity="0.0" />
     </joint>
     <joint name="link4_to_link5" type="continuous">
         <origin xyz="0.0 0.0 0.22" rpy="0.0 0.0 0.0" />
         <parent link="link_4" />
         <child link="link_5" />
-        <axis xyz="0.0 0.0 1"/>
+        <axis xyz="0.0 0.0 1" />
     </joint>
-    <joint name="link5_to_link6" type="continuous">
+    <joint name="link5_to_link6" type="revolute">
         <origin xyz="0.0 0.0 0.18" rpy="0.0 0.0 0.0" />
         <parent link="link_5" />
         <child link="link_6" />
-        <axis xyz="0.0 1 0.0"/>
+        <axis xyz="0.0 1 0.0" />
+        <limit lower="-1.57" upper="1.57" effort="0.0" velocity="0.0" />
     </joint>
     <joint name="link5_to_link7" type="continuous">
         <origin xyz="0.0 0.0 0.09" rpy="0.0 0.0 0.0" />
@@ -122,6 +147,6 @@
         <child link="link_7" />
         <axis xyz="0.0 0.0 1" />
     </joint>
-    
-    
+
+
 </robot>
