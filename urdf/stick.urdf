@@ -14,7 +14,7 @@
         <!-- <collision>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://kuka_stick_description/meshes/collision_0.dae"
+                <mesh filename="package://kuka_stick_description/meshes/simplified/simplified_link_0.dae"
                     scale="1.0 1.0 1.0" />
             </geometry>
         </collision> -->
@@ -30,7 +30,7 @@
         <!-- <collision>
             <origin xyz="0.0 0.0 -0.15" rpy="0.0 0.0 0.0" />
              <geometry>
-                <mesh filename="package://kuka_stick_description/meshes/simplified_link_1.dae"
+                <mesh filename="package://kuka_stick_description/meshes/simplified/simplified_link_1.dae"
                     scale="1.0 1.0 1.0" />
             </geometry>
         </collision> -->
@@ -64,7 +64,7 @@
         <!-- <collision>
             <origin xyz="0.0 0.0 -0.78" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://kuka_stick_description/meshes/simplified_link_4.dae"
+                <mesh filename="package://kuka_stick_description/meshes/simplified/simplified_link_4.dae"
                     scale="1.0 1.0 1.0" />
             </geometry>
         </collision> -->
