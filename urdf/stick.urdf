@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot name="my_kuka_robot">
+    <link name="base_footprint" />
+
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://kuka_stick_description/meshes/link_0.dae"
+                    scale="1.0 1.0 1.0" />
+            </geometry>
+        </visual>
+    </link>
+    <link name="link_1">
+        <visual>
+            <origin xyz="0.0 0.0 -0.15" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://kuka_stick_description/meshes/link_1.dae"
+                    scale="1.0 1.0 1.0" />
+            </geometry>
+        </visual>
+    </link>
+    <link name="link_2">
+        <visual>
+            <origin xyz="0.0 0.0 -0.36" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://kuka_stick_description/meshes/link_2.dae"
+                    scale="1.0 1.0 1.0" />
+            </geometry>
+        </visual>
+    </link>
+     <link name="link_3">
+        <visual>
+            <origin xyz="0.0 0.0 -0.60" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://kuka_stick_description/meshes/link_3.dae"
+                    scale="1.0 1.0 1.0" />
+            </geometry>
+        </visual>
+    </link>
+    <link name="link_4">
+        <visual>
+            <origin xyz="0.0 0.0 -0.78" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://kuka_stick_description/meshes/link_4.dae"
+                    scale="1.0 1.0 1.0" />
+            </geometry>
+        </visual>
+    </link>
+    <link name="link_5">
+        <visual>
+            <origin xyz="0.0 0.0 -1" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://kuka_stick_description/meshes/link_5.dae"
+                    scale="1.0 1.0 1.0" />
+            </geometry>
+        </visual>
+    </link>
+    <link name="link_6">
+        <visual>
+            <origin xyz="0.0 0.0 -1.180" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://kuka_stick_description/meshes/link_6.dae"
+                    scale="1.0 1.0 1.0" />
+            </geometry>
+        </visual>
+    </link>
+    <link name="link_7">
+        <visual>
+            <origin xyz="0.0 0.0 -1.27" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="package://kuka_stick_description/meshes/link_7.dae"
+                    scale="1.0 1.0 1.0" />
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="base_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+        <parent link="base_footprint" />
+        <child link="base_link" />
+    </joint>
+    <joint name="base_link_to_link1" type="continuous">
+        <origin xyz="0.0 0.0 0.15" rpy="0.0 0.0 0.0" />
+        <parent link="base_link" />
+        <child link="link_1" />
+        <axis xyz="0.0 0.0 1"/>
+    </joint>
+    <joint name="link1_to_link2" type="continuous">
+        <origin xyz="0.0 0.0 0.21" rpy="0.0 0.0 0.0" />
+        <parent link="link_1" />
+        <child link="link_2" />
+        <axis xyz="0.0 1 0.0"/>
+    </joint>
+    <joint name="link2_to_link3" type="continuous">
+        <origin xyz="0.0 0.0 0.24" rpy="0.0 0.0 0.0" />
+        <parent link="link_2" />
+        <child link="link_3" />
+        <axis xyz="0.0 0.0 1"/>
+    </joint>
+    <joint name="link3_to_link4" type="continuous">
+        <origin xyz="0.0 0.0 0.179" rpy="0.0 0.0 0.0" />
+        <parent link="link_3" />
+        <child link="link_4" />
+        <axis xyz="0.0 1 0.0"/>
+    </joint>
+    <joint name="link4_to_link5" type="continuous">
+        <origin xyz="0.0 0.0 0.22" rpy="0.0 0.0 0.0" />
+        <parent link="link_4" />
+        <child link="link_5" />
+        <axis xyz="0.0 0.0 1"/>
+    </joint>
+    <joint name="link5_to_link6" type="continuous">
+        <origin xyz="0.0 0.0 0.18" rpy="0.0 0.0 0.0" />
+        <parent link="link_5" />
+        <child link="link_6" />
+        <axis xyz="0.0 1 0.0"/>
+    </joint>
+    <joint name="link5_to_link7" type="continuous">
+        <origin xyz="0.0 0.0 0.09" rpy="0.0 0.0 0.0" />
+        <parent link="link_6" />
+        <child link="link_7" />
+        <axis xyz="0.0 0.0 1" />
+    </joint>
+    
+    
+</robot>
