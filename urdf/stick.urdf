@@ -11,13 +11,14 @@
                     scale="1.0 1.0 1.0" />
             </geometry>
         </visual>
-        <!-- <collision>
+        <collision>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://kuka_stick_description/meshes/simplified/simplified_link_0.dae"
+                <mesh
+                    filename="package://kuka_stick_description/meshes/simplified/simplified_link_0.dae"
                     scale="1.0 1.0 1.0" />
             </geometry>
-        </collision> -->
+        </collision>
     </link>
     <link name="link_1">
         <visual>
@@ -27,13 +28,14 @@
                     scale="1.0 1.0 1.0" />
             </geometry>
         </visual>
-        <!-- <collision>
+        <collision>
             <origin xyz="0.0 0.0 -0.15" rpy="0.0 0.0 0.0" />
-             <geometry>
-                <mesh filename="package://kuka_stick_description/meshes/simplified/simplified_link_1.dae"
+            <geometry>
+                <mesh
+                    filename="package://kuka_stick_description/meshes/simplified/simplified_link_1.dae"
                     scale="1.0 1.0 1.0" />
             </geometry>
-        </collision> -->
+        </collision>
     </link>
     <link name="link_2">
         <visual>
@@ -43,6 +45,14 @@
                     scale="1.0 1.0 1.0" />
             </geometry>
         </visual>
+        <collision>
+            <origin xyz="0.0 0.0 -0.36" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh
+                    filename="package://kuka_stick_description/meshes/simplified/simplified_link_2.dae"
+                    scale="1.0 1.0 1.0" />
+            </geometry>
+        </collision>
     </link>
     <link name="link_3">
         <visual>
@@ -52,6 +62,14 @@
                     scale="1.0 1.0 1.0" />
             </geometry>
         </visual>
+        <collision>
+            <origin xyz="0.0 0.0 -0.60" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh
+                    filename="package://kuka_stick_description/meshes/simplified/simplified_link_3.dae"
+                    scale="1.0 1.0 1.0" />
+            </geometry>
+        </collision>
     </link>
     <link name="link_4">
         <visual>
@@ -61,13 +79,14 @@
                     scale="1.0 1.0 1.0" />
             </geometry>
         </visual>
-        <!-- <collision>
+        <collision>
             <origin xyz="0.0 0.0 -0.78" rpy="0.0 0.0 0.0" />
             <geometry>
-                <mesh filename="package://kuka_stick_description/meshes/simplified/simplified_link_4.dae"
+                <mesh
+                    filename="package://kuka_stick_description/meshes/simplified/simplified_link_4.dae"
                     scale="1.0 1.0 1.0" />
             </geometry>
-        </collision> -->
+        </collision>
     </link>
     <link name="link_5">
         <visual>
@@ -77,6 +96,14 @@
                     scale="1.0 1.0 1.0" />
             </geometry>
         </visual>
+        <collision>
+            <origin xyz="0.0 0.0 -1" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh
+                    filename="package://kuka_stick_description/meshes/simplified/simplified_link_5.dae"
+                    scale="1.0 1.0 1.0" />
+            </geometry>
+        </collision>
     </link>
     <link name="link_6">
         <visual>
@@ -86,6 +113,14 @@
                     scale="1.0 1.0 1.0" />
             </geometry>
         </visual>
+        <collision>
+            <origin xyz="0.0 0.0 -1.180" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh
+                    filename="package://kuka_stick_description/meshes/simplified/simplified_link_6.dae"
+                    scale="1.0 1.0 1.0" />
+            </geometry>
+        </collision>
     </link>
     <link name="link_7">
         <visual>
@@ -95,6 +130,14 @@
                     scale="1.0 1.0 1.0" />
             </geometry>
         </visual>
+        <collision>
+            <origin xyz="0.0 0.0 -1.27" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh
+                    filename="package://kuka_stick_description/meshes/simplified/simplified_link_7.dae"
+                    scale="1.0 1.0 1.0" />
+            </geometry>
+        </collision>
     </link>
 
     <joint name="base_joint" type="fixed">
@@ -147,6 +190,5 @@
         <child link="link_7" />
         <axis xyz="0.0 0.0 1" />
     </joint>
-
 
 </robot>
