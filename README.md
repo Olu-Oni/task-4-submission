@@ -65,6 +65,11 @@ source install/setup.bash
 ### Launch the URDF Visualization
 
 ```bash
+# Make sure you're in the workspace root directory
+cd <your_workspace_name>
+```
+
+```bash
 # Source your workspace
 source install/setup.bash
 
