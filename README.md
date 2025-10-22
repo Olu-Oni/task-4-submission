@@ -27,6 +27,17 @@ sudo apt install ros-humble-urdf-tutorial ros-humble-joint-state-publisher-gui \
                  ros-humble-robot-state-publisher ros-humble-rviz2
 ```
 
+### 2.5 Additional Dependencies that may cause some issues otherwise🤷‍♂️
+
+```bash
+sudo apt update
+sudo apt install \
+  ros-humble-xacro \
+  ros-humble-ros2-control \
+  ros-humble-ros2-controllers \
+  ros-humble-controller-manager \
+```
+
 ### 3. Set Up Workspace
 
 ```bash
