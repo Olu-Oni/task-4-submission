@@ -42,13 +42,13 @@ sudo apt install \
 
 ```bash
 # Create a workspace
-mkdir -p ~/ros2_ws/src
-cd ~/ros2_ws/src
+mkdir -p <your_workspace_name>/src
+cd <your_workspace_name>/src
 
 # Clone this repository
 git clone https://github.com/Olu-Oni/task-4-submission/ kuka_stick_description
 
-cd ~/ros2_ws
+cd ..
 
 # Source ROS 2
 source /opt/ros/humble/setup.bash
@@ -66,10 +66,10 @@ source install/setup.bash
 
 ```bash
 # Source your workspace
-source ~/ros2_ws/install/setup.bash
+source install/setup.bash
 
 # Launch with RViz
-ros2 launch urdf_tutorial display.launch.py model:=src/kuka_stick_description/urdf/stick.urdf
+ros2 launch urdf_tutorial display.launch.py model:=$PWD/kuka_stick_description/urdf/stick.urdf
 ```
 
 This will open:
