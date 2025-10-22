@@ -54,7 +54,7 @@ cd ~/ros2_ws
 source /opt/ros/humble/setup.bash
 
 # Build the package
-colcon build --packages-select kuka_stick_description
+colcon build --symlink-install --packages-select kuka_stick_description
 
 # Source the workspace
 source install/setup.bash
